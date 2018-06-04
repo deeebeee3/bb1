@@ -12992,6 +12992,39 @@ define('Cart.Component', [
     });
     Application.registerComponent(cart_component);
 });
+define('UserPreferences.Model', ['SC.Model'], function (SCModel) {
+    'use strict';
+    return SCModel.extend({
+        name: 'UserPreferences',
+        list: function () {
+            return [
+                {
+                    internalid: 1,
+                    type: 'Color',
+                    value: '7'
+                },
+                {
+                    internalid: 2,
+                    type: 'Size',
+                    value: '5'
+                }
+            ];
+        }
+    });
+});
+define('UserPreferences.ServiceController', [
+    'ServiceController',
+    'UserPreferences.Model'
+], function (ServiceController, UserPreferencesModel) {
+    'use strict';
+    return ServiceController.extend({
+        name: 'UserPreferences.ServiceController',
+        get: function () {
+            var id = this.request.getParameter('internalid');
+            return id ? UserPreferencesModel.get(id) : UserPreferencesModel.list();
+        }
+    });
+});
 define('SCA', [
     'Application',
     'Account.ForgotPassword.ServiceController',
@@ -13036,7 +13069,8 @@ define('SCA', [
     'Location.ServiceController',
     'ExternalPayment.Model',
     'SC.BaseComponent',
-    'Cart.Component'
+    'Cart.Component',
+    'UserPreferences.ServiceController'
 ], function () {
 });
 ConfigurationManifestDefaults = {

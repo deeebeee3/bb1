@@ -578,7 +578,8 @@
                 "Location.ServiceController",
                 "ExternalPayment.Model",
                 "SC.BaseComponent",
-                "Cart.Component"
+                "Cart.Component",
+                "UserPreferences.ServiceController"
             ],
             "exportFile": "ssp_libraries.js",
             "amdConfig": {
