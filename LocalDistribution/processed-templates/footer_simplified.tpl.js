@@ -1,0 +1,5 @@
+define('footer_simplified.tpl', ['Handlebars','Handlebars.CompilerNameLookup'], function (Handlebars, compilerNameLookup){ var template = Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    return " <div data-view=\"Global.BackToTop\"></div><div class=\"footer-simplified-content\"><div class=\"footer-simplified-content-nav\"></div><div id=\"banner-footer\" class=\"content-banner banner-footer\" data-cms-area=\"simplified_footer_banner\" data-cms-area-filters=\"global\"></div><div class=\"footer-simplified-content-copyright\"> "
+    + container.escapeExpression((compilerNameLookup(helpers,"translate") || (depth0 && compilerNameLookup(depth0,"translate")) || helpers.helperMissing).call(depth0 != null ? depth0 : (container.nullContext || {}),"&copy; 2008-2015 Company Name",{"name":"translate","hash":{},"data":data}))
+    + " </div></div>  ";
+},"useData":true}); template.Name = 'footer_simplified'; return template;});
