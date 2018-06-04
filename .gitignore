@@ -59,3 +59,7 @@ typings/
 
 # next.js build output
 .next
+
+#BB1 Specific
+DeployDistribution
+LocalDistribution

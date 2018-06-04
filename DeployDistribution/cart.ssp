@@ -140,7 +140,7 @@
 		   for(var i=0; i < js_files.length; i++)
 		   {
 		%>
-				<script src="<%= session.getAbsoluteUrl(js_files[i]) %>?t=1527789257634"></script>
+				<script src="<%= session.getAbsoluteUrl(js_files[i]) %>?t=1528105358233"></script>
 		<%   
 		   }
 		%>
