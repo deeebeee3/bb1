@@ -12,7 +12,9 @@
         "deploy": "DeployDistribution"
     },
     "modules": {
+        "extensions/UserPreferences": "1.0.0",
         "BB1/HomeExt": "Deepak1.0.0",
+
         "extensions/MyExampleCartExtension1": "1.0.0",
         "extensions/MyExamplePDPExtension1": "1.0.0",
         "extensions/MyExamplePDPExtension2": "1.0.0",
@@ -357,7 +359,8 @@
                     "GoogleMap",
                     "GoogleMap.Configuration",
                     "StoreLocatorAccessPoints",
-                    "SC.CCT.Html"
+                    "SC.CCT.Html",
+                    "UserPreferences"
                 ],
                 "amdclean": false,
                 "amdConfig": {
