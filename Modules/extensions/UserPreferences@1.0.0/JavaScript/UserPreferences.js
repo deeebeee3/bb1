@@ -6,16 +6,20 @@ when the module is mounted to the application.
 */
 
 define('UserPreferences'
-, []
+, [
+  'UserPreferences.Router'
+]
 , function
-  ()
+  (UserPreferencesRouter)
 {
   'use strict';
 
   return {
-    mountToApp: function ()
+    mountToApp: function (application)
     {
       console.log('Hello World! UserPreferences calling!');
+      
+      return new UserPreferencesRouter(application);
     }
   }
 });

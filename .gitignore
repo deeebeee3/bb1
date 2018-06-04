@@ -61,6 +61,6 @@ typings/
 .next
 
 #BB1 Specific
-/DeployDistribution
-/LocalDistribution
+DeployDistribution/
+LocalDistribution/
 payload.json

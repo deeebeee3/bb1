@@ -35,7 +35,7 @@ define('home.tpl', ['Handlebars','Handlebars.CompilerNameLookup'], function (Han
 
   return " <div class=\"home\"><div class=\"home-banner-top\"><p class=\"home-banner-top-message\"> "
     + container.escapeExpression((compilerNameLookup(helpers,"translate") || (depth0 && compilerNameLookup(depth0,"translate")) || helpers.helperMissing).call(alias1,"Use promo code <strong>SCADEMO</strong> for <strong>30%</strong> off your purchase",{"name":"translate","hash":{},"data":data}))
-    + " </p></div> Hello world two three <div class=\"home-slider-container\"><div class=\"home-image-slider\"><ul data-slider class=\"home-image-slider-list\"> "
+    + " </p></div> HELLO WORLD <div class=\"home-slider-container\"><div class=\"home-image-slider\"><ul data-slider class=\"home-image-slider-list\"> "
     + ((stack1 = compilerNameLookup(helpers,"each").call(alias1,(depth0 != null ? compilerNameLookup(depth0,"carouselImages") : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 0, blockParams, depths),"inverse":container.program(3, data, 0, blockParams, depths),"data":data})) != null ? stack1 : "")
     + " </ul></div></div><div class=\"home-banner-main\"> "
     + ((stack1 = compilerNameLookup(helpers,"each").call(alias1,(depth0 != null ? compilerNameLookup(depth0,"bottomBannerImages") : depth0),{"name":"each","hash":{},"fn":container.program(5, data, 0, blockParams, depths),"inverse":container.program(7, data, 0, blockParams, depths),"data":data})) != null ? stack1 : "")

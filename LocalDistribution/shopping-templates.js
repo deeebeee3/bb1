@@ -13323,7 +13323,7 @@ define('home.tpl', [
                 'name': 'translate',
                 'hash': {},
                 'data': data
-            })) + ' </p></div> Hello world two three <div class="home-slider-container"><div class="home-image-slider"><ul data-slider class="home-image-slider-list"> ' + ((stack1 = compilerNameLookup(helpers, 'each').call(alias1, depth0 != null ? compilerNameLookup(depth0, 'carouselImages') : depth0, {
+            })) + ' </p></div> HELLO WORLD <div class="home-slider-container"><div class="home-image-slider"><ul data-slider class="home-image-slider-list"> ' + ((stack1 = compilerNameLookup(helpers, 'each').call(alias1, depth0 != null ? compilerNameLookup(depth0, 'carouselImages') : depth0, {
                 'name': 'each',
                 'hash': {},
                 'fn': container.program(1, data, 0, blockParams, depths),

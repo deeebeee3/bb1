@@ -269,5 +269,6 @@
   "quick_order_empty_cart.tpl.js",
   "store_locator_tooltip.tpl.js",
   "storelocator_accesspoints_headerlink.tpl.js",
-  "sc_cct_html.tpl.js"
+  "sc_cct_html.tpl.js",
+  "user_preferences_list.tpl.js"
 ]
