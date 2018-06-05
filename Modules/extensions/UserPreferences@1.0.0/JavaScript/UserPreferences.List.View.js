@@ -4,6 +4,8 @@ define('UserPreferences.List.View'
   , 'user_preferences_list.tpl'
   , 'Backbone.CollectionView'
   , 'UserPreferences.Details.View'
+  , 'GlobalViews.Confirmation.View'
+  , 'jQuery'
   ]
 , function
   (
@@ -11,6 +13,8 @@ define('UserPreferences.List.View'
   , user_preferences_list_tpl
   , CollectionView
   , UserPreferencesDetailsView
+  , ConfirmationView
+  , jQuery
   )
 {
   'use strict';
