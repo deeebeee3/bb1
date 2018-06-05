@@ -1,10 +1,4 @@
-<h1>
-    {{#if isNew}}
-        {{translate 'Add User Preference'}}
-    {{else}}
-        {{translate 'Update User Preference'}}
-    {{/if}}
-</h1>
+<h1>{{translate 'User Preferences'}}</h1>
 
 <!--<h3>{{message}}</h3>-->
 

@@ -1,4 +1,11 @@
-<h1>{{translate 'Add/Update User Preference'}}</h1>
+<h1>
+    {{#if isNew}}
+        {{translate 'Add User Preference'}}
+    {{else}}
+        {{translate 'Update User Preference'}}
+    {{/if}}
+</h1>
+
 <form>
     <fieldset>
         <label>{{translate 'Type'}}</label>
