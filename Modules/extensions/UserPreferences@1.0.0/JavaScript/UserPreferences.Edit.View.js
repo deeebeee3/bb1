@@ -43,7 +43,9 @@ define('UserPreferences.Edit.View'
   , getContext: function ()
     {
       return {
-        typeOptions: this.typeOptions()
+        typeOptions: this.typeOptions(), 
+        type: this.model.get('type'), 
+        value: this.model.get('value')
       }
     }
   })
