@@ -45,7 +45,8 @@ define('UserPreferences.Edit.View'
       return {
         typeOptions: this.typeOptions(), 
         type: this.model.get('type'), 
-        value: this.model.get('value')
+        value: this.model.get('value'),
+        isNew: this.model.isNew()
       }
     }
   })

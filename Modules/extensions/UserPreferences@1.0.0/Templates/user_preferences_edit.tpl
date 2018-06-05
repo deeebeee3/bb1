@@ -11,5 +11,11 @@
         <label>{{translate 'Value'}}</label>
         <input type="text" name="value" id="value" value="{{value}}">
     </fieldset>
-    <button type="submit">{{translate 'Add/Update'}}</button>
+    <button type="submit">
+        {{#if isNew}}
+            {{translate 'Add'}}
+        {{else}}
+            {{translate 'Update'}}
+        {{/if}}
+    </button>
 </form>
