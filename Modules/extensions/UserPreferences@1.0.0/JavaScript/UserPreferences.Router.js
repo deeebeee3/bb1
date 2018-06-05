@@ -2,13 +2,15 @@ define('UserPreferences.Router'
 , [
     'Backbone',
     'UserPreferences.List.View',
-    'UserPreferences.Collection'
+    'UserPreferences.Collection',
+    'UserPreferences.Model'
   ]
 , function
   (
     Backbone, 
     UserPreferencesListView,
-    UserPreferencesCollection
+    UserPreferencesCollection,
+    UserPreferencesModel
   )
 {
   'use strict';
