@@ -3,14 +3,16 @@ define('UserPreferences.Router'
     'Backbone',
     'UserPreferences.List.View',
     'UserPreferences.Collection',
-    'UserPreferences.Model'
+    'UserPreferences.Model',
+    'UserPreferences.Edit.View'
   ]
 , function
   (
     Backbone, 
     UserPreferencesListView,
     UserPreferencesCollection,
-    UserPreferencesModel
+    UserPreferencesModel,
+    UserPreferencesEditView
   )
 {
   'use strict';
@@ -48,11 +50,19 @@ define('UserPreferences.Router'
      
       var model = new UserPreferencesModel();
 
-      model.set('type', 1);
-      model.set('value', 'Orange');
+      // model.set('type', 1);
+      // model.set('value', 'Orange');
 
-      model.save();
-    }
+      // model.save();
+
+      var view = new UserPreferencesEditView
+      ({
+        model: model
+      , application: this.application
+      })
+
+      view.showContent();
+      }
 
   });
 });
