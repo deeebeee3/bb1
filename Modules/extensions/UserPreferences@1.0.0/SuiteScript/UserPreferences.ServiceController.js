@@ -33,6 +33,12 @@ define('UserPreferences.ServiceController'
       var id = this.request.getParameter('internalid');
       UserPreferencesModel.update(id, this.data);
       return UserPreferencesModel.get(id);
+    },
+
+    delete: function (){
+      var id = this.request.getParameter('internalid');
+      UserPreferencesModel.delete(id);
+      return {'status': 'ok'}
     }
 
   });

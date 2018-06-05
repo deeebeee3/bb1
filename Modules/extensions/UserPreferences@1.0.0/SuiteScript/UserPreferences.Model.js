@@ -100,7 +100,11 @@ define('UserPreferences.Model'
       record.setFieldValue('custrecord_user_preferences_value', data.value);
 
       return nlapiSubmitRecord(record);
+    },
+
+    delete: function (id) {
+      nlapiDeleteRecord('customrecord_user_preferences', id);
     }
-    
+
   });
 });
