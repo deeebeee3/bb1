@@ -6,7 +6,7 @@
           <th>{{translate 'Internal ID'}}</th>
           <th>{{translate 'Type'}}</th>
           <th>{{translate 'Value'}}</th>
-          <th>{{translate 'Actions'}}</th>
+          <th colspan="2">{{translate 'Actions'}}</th>
       </tr>
     </thead>
     <tbody data-view="UserPreferences.Collection"></tbody>
