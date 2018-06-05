@@ -20,6 +20,15 @@ define('UserPreferences.List.View'
 
     initialize: function (options)
     {
+      /*
+      listen for any changes to the collection; if something is added, deleted, 
+      changed, etc, then re-render the collection
+      */
+      var self = this;
+      this.collection.on('reset sync add remove change destroy', function() {
+        self.render();
+      });
+
       this.application = options.application
     , this.collection = options.collection
     },
@@ -34,6 +43,34 @@ define('UserPreferences.List.View'
     //     message: 'Hello world! 🌍👋'
     //   }
     // },
+
+    events: {
+      'click button[data-action="delete"]': 'removeUserPreference'
+    },
+
+    removeModel: function (options) {
+      var model = options.context.collection.get(options.id);
+      model.destroy();
+    },
+
+    removeUserPreference: function (e) {
+      e.preventDefault();
+
+      var view = new ConfirmationView
+      ({
+        title: 'Remove Preference'
+      , body: 'Are you sure you want to remove this preference?'
+      , callBack: this.removeModel
+      , callBackParameters:
+        {
+          context: this
+        , id: jQuery(e.target).data('id')
+        }
+      , autohide: true
+      });
+
+      this.application.getLayout().showInModal(view);
+    },
 
     childViews:{
       'UserPreferences.Collection': function ()
