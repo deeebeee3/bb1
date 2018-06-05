@@ -91,7 +91,16 @@ define('UserPreferences.Model'
         , value: search[0].getValue('custrecord_user_preferences_value')
         }
       }
-    }
+    },
 
+    update: function (id, data) {
+      var record = nlapiLoadRecord('customrecord_user_preferences', id);
+
+      record.setFieldValue('custrecord_user_preferences_type', data.type);
+      record.setFieldValue('custrecord_user_preferences_value', data.value);
+
+      return nlapiSubmitRecord(record);
+    }
+    
   });
 });
