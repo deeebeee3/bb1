@@ -64,3 +64,6 @@ typings/
 DeployDistribution/*
 LocalDistribution/*
 payload.json
+templates-manifest-checkout.json
+templates-manifest-myaccount.json
+templates-manifest-shopping.json

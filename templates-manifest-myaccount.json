@@ -271,5 +271,6 @@
   "storelocator_accesspoints_headerlink.tpl.js",
   "sc_cct_html.tpl.js",
   "user_preferences_list.tpl.js",
-  "user_preferences_details.tpl.js"
+  "user_preferences_details.tpl.js",
+  "user_preferences_edit.tpl.js"
 ]
