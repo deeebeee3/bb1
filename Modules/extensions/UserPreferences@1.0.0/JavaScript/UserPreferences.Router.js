@@ -36,6 +36,20 @@ define('UserPreferences.Router'
       {
         view.showContent();
       });
+    },
+
+    preferencesAdd: function ()
+    {
+      /* when a user visits preferences/add, it'll be called. It'll create a new model and 
+      add some dummy data to it, and then it'll run its save method. This method is built into 
+      Backbone and our application to trigger the service specified in the model we specified. */
+     
+      var model = new UserPreferencesModel();
+
+      model.set('type', 1);
+      model.set('value', 'Orange');
+
+      model.save();
     }
 
   });
