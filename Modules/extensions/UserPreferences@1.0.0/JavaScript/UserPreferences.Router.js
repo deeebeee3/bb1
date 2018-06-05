@@ -20,7 +20,7 @@ define('UserPreferences.Router'
   return Backbone.Router.extend({
     routes: {
       'preferences': 'preferencesList', 
-      'preferences/add': 'preferencesAdd', 
+      'preferences/add': 'preferencesEdit', 
       'preferences/:id': 'preferencesEdit'
     }, 
     
@@ -42,27 +42,34 @@ define('UserPreferences.Router'
       });
     },
 
-    preferencesAdd: function ()
-    {
-      /* when a user visits preferences/add, it'll be called. It'll create a new model and 
-      add some dummy data to it, and then it'll run its save method. This method is built into 
-      Backbone and our application to trigger the service specified in the model we specified. */
-     
+    preferencesEdit: function (id) {
       var model = new UserPreferencesModel();
+      var promise = jQuery.Deferred();
+      var application = this.application;
 
-      // model.set('type', 1);
-      // model.set('value', 'Orange');
-
-      // model.save();
-
-      var view = new UserPreferencesEditView
-      ({
-        model: model
-      , application: this.application
-      })
-
-      view.showContent();
+      if (!id) {promise.resolve()}
+      else
+      {
+        model.fetch({data: {internalid: id}})
+        .done(function () {promise.resolve();});
       }
+
+      promise.done(function ()
+      {
+        var view = new UserPreferencesEditView
+        ({
+          application: application
+        , model: model
+        });
+
+        view.showContent();
+        view.model.on('sync', function (model)
+        {
+          Backbone.history.navigate('preferences', {trigger: true});
+        });
+      });
+    }
+
 
   });
 });
