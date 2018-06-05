@@ -28,12 +28,12 @@ define('UserPreferences.List.View'
     pass from a view to a template. They can be the results of complex functions, data values, 
     or (in our case) simple text messages.*/
     
-    getContext: function ()
-    {
-      return {
-        message: 'Hello world! 🌍👋'
-      }
-    },
+    // getContext: function ()
+    // {
+    //   return {
+    //     message: 'Hello world! 🌍👋'
+    //   }
+    // },
 
     childViews:{
       'UserPreferences.Collection': function ()
