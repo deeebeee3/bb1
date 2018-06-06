@@ -10,7 +10,7 @@
     <div data-type="alert-placeholder"></div>
 
     <fieldset>
-        <div data-input="type" data-validation="control-group"></div>
+        <div data-input="type" data-validation="control-group">
             <label>{{translate 'Type'}}</label>
 
             <span data-validation="control"></span>
@@ -22,7 +22,7 @@
             </span>
         </div>
 
-        <div data-input="type" data-validation="control-group"></div>
+        <div data-input="type" data-validation="control-group">
             <label>{{translate 'Value'}}</label>
 
             <span data-validation="control"></span>
