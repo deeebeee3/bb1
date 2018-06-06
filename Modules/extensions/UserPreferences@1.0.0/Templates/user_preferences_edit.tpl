@@ -7,17 +7,30 @@
 </h1>
 
 <form>
-    <fieldset>
-        <label>{{translate 'Type'}}</label>
-        <select name="type" id="type">
-            {{#each typeOptions}}
-                <option value="{{internalid}}">{{name}}</option>
-            {{/each}}
-        </select>
+    <div data-type="alert-placeholder"></div>
 
-        <label>{{translate 'Value'}}</label>
-        <input type="text" name="value" id="value" value="{{value}}">
+    <fieldset>
+        <div data-input="type" data-validation="control-group"></div>
+            <label>{{translate 'Type'}}</label>
+
+            <span data-validation="control"></span>
+                <select name="type" id="type">
+                    {{#each typeOptions}}
+                        <option value="{{internalid}}">{{name}}</option>
+                    {{/each}}
+                </select>
+            </span>
+        </div>
+
+        <div data-input="type" data-validation="control-group"></div>
+            <label>{{translate 'Value'}}</label>
+
+            <span data-validation="control"></span>
+                <input type="text" name="value" id="value" value="{{value}}">
+            </span>
+        </div>
     </fieldset>
+
     <button type="submit">
         {{#if isNew}}
             {{translate 'Add'}}
