@@ -15,11 +15,18 @@ define('UserPreferences'
   'use strict';
 
   return {
-    mountToApp: function (application)
-    {
+    mountToApp: function (application) {
       console.log('Hello World! UserPreferences calling!');
       
       return new UserPreferencesRouter(application);
+    },
+
+    MenuItems: {
+        parent: 'settings'
+      , id: 'userpreferenceslist'
+      , name: 'User Preferences'
+      , url: 'preferences'
+      , index: 1
     }
   }
 });

@@ -6,13 +6,13 @@ frontend model for each one.
 
 define('UserPreferences.Model'
 , [
+    'underscore',
     'Backbone'
-  , 'underscore'
   ]
 , function
   (
-    Backbone
-  , _
+    _
+  ,  Backbone
   )
 {
   'use strict';
