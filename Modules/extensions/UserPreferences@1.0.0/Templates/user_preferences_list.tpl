@@ -1,20 +1,21 @@
-<h1>{{translate 'User Preferences'}}</h1>
-
-<!--<h3>{{message}}</h3>-->
-
-<p><a href="/preferences/add">{{translate 'Add New'}}</a></p>
-
-<table>
-    <thead>
-      <tr>
-          <th>{{translate 'Internal ID'}}</th>
-          <th>{{translate 'Type'}}</th>
-          <th>{{translate 'Value'}}</th>
-          <th colspan="2">{{translate 'Actions'}}</th>
-      </tr>
-    </thead>
-    <tbody data-view="UserPreferences.Collection"></tbody>
-</table>
+<section class="user-preferences-list">
+    <header class="user-preferences-list-header">
+        <h1 class="user-preferences-list-title">{{translate 'User Preferences'}}</h1>
+        <!--<h3>{{message}}</h3>-->
+        <a class="user-preferences-list-button-new" href="/preferences/add">{{translate 'Add New'}}</a>
+    </header>
+    <table class="user-preferences-list-table">
+        <thead class="user-preferences-list-table-header">
+          <tr>
+              <th class="user-preferences-list-table-header-id">{{translate 'Internal ID'}}</th>
+              <th class="user-preferences-list-table-header-type">{{translate 'Type'}}</th>
+              <th class="user-preferences-list-table-header-value">{{translate 'Value'}}</th>
+              <th class="user-preferences-list-table-header-actions" colspan="2">{{translate 'Actions'}}</th>
+          </tr>
+        </thead>
+        <tbody data-view="UserPreferences.Collection"></tbody>
+    </table>
+</section>
 
 <!--
 The first is the {{translate}} helper. SuiteCommerce sites support multiple languages and it works 

@@ -943,7 +943,8 @@
                                 "product-list-edit-item"
                             ]
                         },
-                        "Location.SCA"
+                        "Location.SCA",
+                        "UserPreferences"
                     ]
                 },
                 {
