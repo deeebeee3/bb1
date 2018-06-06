@@ -22,6 +22,14 @@ define('UserPreferences.List.View'
   return Backbone.View.extend({
     template: user_preferences_list_tpl, 
 
+    getSelectedMenu: function () {
+      return 'userpreferenceslist'
+    },
+
+    getBreadcrumbPages: function () {
+      return [{text: 'User Preferences'}]
+    },
+
     initialize: function (options)
     {
       /*

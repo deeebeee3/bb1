@@ -18,6 +18,28 @@ define('UserPreferences.Edit.View'
   return Backbone.View.extend({
     template: user_preferences_edit_tpl
 
+  , getSelectedMenu: function () {
+      return 'userpreferenceslist'
+    }
+
+  , getBreadcrumbPages: function ()
+  {
+    if (this.model.isNew())
+    {
+      return [
+        {text: 'User Preferences', href: '/preferences'}
+      , {text: 'New'}
+      ]
+    }
+    else
+    {
+      return [
+        {text: 'User Preferences', href: '/preferences'}
+      , {text: 'Edit'}
+      ]
+    }
+  }
+
   , events:
     {
       'submit form': 'saveForm'
