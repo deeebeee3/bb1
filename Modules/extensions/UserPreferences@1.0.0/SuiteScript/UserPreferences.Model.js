@@ -10,7 +10,21 @@ define('UserPreferences.Model'
   'use strict';
 
   return SCModel.extend({
+
     name: 'UserPreferences', 
+
+    validation: {
+      'type':
+      {
+        required: true
+      , msg: 'Please select a type'
+      }
+    , 'value':
+      {
+        required: true
+      , msg: 'Please enter a value'
+      }
+    },
     
     list: function () {
       /* 
@@ -50,6 +64,8 @@ define('UserPreferences.Model'
     },
 
     create: function (data) {
+      this.validate(data);
+
       var newRecord = nlapiCreateRecord('customrecord_user_preferences');
 
       newRecord.setFieldValue('custrecord_user_preferences_owner', nlapiGetUser());
@@ -94,6 +110,8 @@ define('UserPreferences.Model'
     },
 
     update: function (id, data) {
+      this.validate(data);
+
       var record = nlapiLoadRecord('customrecord_user_preferences', id);
 
       record.setFieldValue('custrecord_user_preferences_type', data.type);
